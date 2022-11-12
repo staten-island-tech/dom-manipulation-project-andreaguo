@@ -5,19 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check console</title>
+    <title>baking recipes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="container-box">
-        <p id="text">We can add more text with input</p>
-        <input type="text" id="input">
-        <button type="button" id="btn">Click Me!</button>
+    <header>
+        <h1>submit baking ideas here:</h1>
+    </header>
 
+    <div id="entries">
+        <div id="name">
+            <p id="text">NAME HERE</p>
+            <input type="text" id="nameInput">
+        </div>
+
+        <div id="ingredients">
+            <p id="text">LIST INGREDIENTS</p>
+            <input type="text" id="ingrInput">
+        </div>
+
+        <div id="instructions">
+            <p id="text">LIST INSTRUCTIONS</p>
+            <input type="text" id="instrInput">
+        </div>
+
+        <div id="image">
+            <p id="text">ATTACH IMAGE URL</p>
+            <input type="url" id="imgInput">
+        </div>
+       
+        <button type="button" class="button" id="btn">enter</button>
     </div>
+
+    <button type="clear" id="clear">clear</button>
 
     <script src="index.js"></script> <!-- linking the javasript file -->
 </body>
+
 
 </html>
