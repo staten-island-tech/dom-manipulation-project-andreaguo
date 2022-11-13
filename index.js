@@ -2,14 +2,15 @@ const DOMSelectors = {
   button: document.getElementById("btn"),           // "Enter" button
   box: document.getElementById("entries"),          // All Entries
   input: document.querySelectorAll('#input'),     // Input Name responses 
+  allInputsArray: Array.from(input),
   imageURL: document.querySelector(`#imgInput`),      // Input image responses
   clearButton: document.querySelector(`#clear`)     // "Reload" button  
 };
 
-function returnInput() {
-let input = DOMSelectors.input.value;
+function returnResponses() {
+let input = DOMSelectors.allInputsArray.value;
   DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${input}</p>`);
-  DOMSelectors.input.value = "";
+  DOMSelectors.allInputsArray.value = "";
 }
 
 function style() {
@@ -17,14 +18,17 @@ function style() {
 }
 
 DOMSelectors.button.addEventListener("click", function () {
-  returnInput();
+  DOMSelectors.allInputsArray.forEach((input) => {
+      DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${input}</p>`);
+      DOMSelectors.input.value = "";
+  });  
 }); // when "enter" button is clicked, name of food will be printed at the bottom
 
 DOMSelectors.button.addEventListener("click", function () {
   let input = DOMSelectors.imageURL.value;
   DOMSelectors.box.insertAdjacentHTML("beforeend", `<img src="${input}"></img>`);
   DOMSelectors.imageURL.value = "";
-}); // when "enter" button is clicked, name of food will be printed at the bottom
+}); // when "enter" button is clicked, image of food will be shown at the bottom
 
   DOMSelectors.button.insertAdjacentHTML(
   "afterend",
@@ -32,5 +36,6 @@ DOMSelectors.button.addEventListener("click", function () {
 ); // heading separates results from entries
 
 DOMSelectors.clearButton.addEventListener("click", function() {
-  location.reload(); return false;
+  location.reload(); 
+  return false;
 }); // when "clear" button is clicked, page is refreshed/ new objects are cleared
