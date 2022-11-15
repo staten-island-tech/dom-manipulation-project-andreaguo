@@ -3,7 +3,8 @@ const DOMSelectors = {
   button: document.getElementById("btn"),           // "Enter" button
   box: document.getElementById("entries"),          // All Entries
   imageURL: document.querySelector(`#imgInput`),      // Input image responses
-  clearButton: document.querySelector(`#clear`)     // "Reload" button  
+  clearButton: document.querySelector(`#clear`),     // "Reload" button  
+  display:document.querySelector(".display")
 };
 
 // function returnResponses() {
@@ -19,10 +20,21 @@ const DOMSelectors = {
 DOMSelectors.button.addEventListener("click", function () {
   let input = document.querySelectorAll(`#input`);
   let inputs = Array.from(input);
-  inputs.forEach((element) => {
-    input.insertAdjacentHTML("beforeend", `<p> ${element} </p>`);
-    input.value = "";
-  })
+  const recipe = {};
+  recipe.name = inputs[0].value;
+  recipe.ingredients = inputs[1].value;
+  recipe.instructions = inputs[2].value;
+  DOMSelectors.display.insertAdjacentHTML("beforeend", `<p> Recipe For ${recipe.name}</p>`);
+  DOMSelectors.display.insertAdjacentHTML("beforeend", `<p> Ingredients:
+  ${recipe.ingredients}</p>`);
+  DOMSelectors.display.insertAdjacentHTML("beforeend", `<p> Instructions: 
+  ${recipe.instructions}</p>`);
+  console.log(inputs)
+  input.value = "";
+  /* inputs.forEach((element) => {
+    DOMSelectors.display.insertAdjacentHTML("beforeend", `<p> ${element.value} </p>`);
+    
+  }) */
   /* DOMSelectors.allInputsArray.forEach((input) => {
     console.log(input)
       DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${input}</p>`);
