@@ -30,7 +30,10 @@ DOMSelectors.button.addEventListener("click", function () {
   DOMSelectors.display.insertAdjacentHTML("beforeend", `<p> Instructions: 
   ${recipe.instructions}</p>`);
   console.log(inputs)
-  input.value = "";
+  inputs.forEach((el)=>{
+    el.value="";
+  })
+  
   /* inputs.forEach((element) => {
     DOMSelectors.display.insertAdjacentHTML("beforeend", `<p> ${element.value} </p>`);
     
