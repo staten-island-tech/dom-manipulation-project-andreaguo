@@ -33,16 +33,6 @@ DOMSelectors.button.addEventListener("click", function () {
   inputs.forEach((el)=>{
     el.value="";
   })
-  
-  /* inputs.forEach((element) => {
-    DOMSelectors.display.insertAdjacentHTML("beforeend", `<p> ${element.value} </p>`);
-    
-  }) */
-  /* DOMSelectors.allInputsArray.forEach((input) => {
-    console.log(input)
-      DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${input}</p>`);
-      DOMSelectors.input.value = "";
-  });   */
 }); // when "enter" button is clicked, name of food will be printed at the bottom
 
 DOMSelectors.button.addEventListener("click", function () {

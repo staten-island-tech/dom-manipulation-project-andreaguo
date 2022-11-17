@@ -1,10 +1,36 @@
-body {
-    background-color: rgb(170, 115, 71);
+html {
+    background: rgb(170, 115, 71);
     font-size: 2vh;
     color: cornsilk;
     text-align: center;
 }
 
-.button {
-    margin: 3vh;
+.button,
+.button:link,
+.button:visited,
+.clear,
+.clear:link,
+.clear:visited {
+    padding: 2px 8px;
+    display: inline-block;
+    margin: 1rem;
+    font-size: 1.5vh;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+    border: white;
+}
+
+.button:hover,
+.clear:hover {
+    transform: translateY(-0.1vh);
+    box-shadow: 0 1vh 2vh rgb(127, 80, 46);
+}
+
+.button:active,
+.clear:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0.2);
 }
