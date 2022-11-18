@@ -3,7 +3,7 @@ const DOMSelectors = {
   button: document.getElementById("btn"),           // "Enter" button
   box: document.getElementById("entries"),          // All Entries
   imageURL: document.querySelector(`#imgInput`),      // Input image responses
-  clearButton: document.querySelector(`#clear`),     // "Reload" button  
+  clear: document.querySelector(`#clear`),     // "Reload" button  
   display:document.querySelector(".display")
 };
 
@@ -43,7 +43,14 @@ DOMSelectors.button.addEventListener("click", function () {
 
   DOMSelectors.button.insertAdjacentHTML(
   "afterend",
-  `<h2>full entry here: <h2>`
+  `<div class="button">
+    <image src></image>
+    <h1 class="">${input}</h1>
+    <img src="${imageURL}" class="img" alt="">
+    <br>
+    <button type="clear" class="clear" id="clear">clear</button>
+
+  </div>`
 ); // heading separates results from entries
 
 DOMSelectors.clearButton.addEventListener("click", function() {

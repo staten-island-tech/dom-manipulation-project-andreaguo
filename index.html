@@ -17,32 +17,29 @@
     <form id="entries">
         <div id="name">
             <p id="text">NAME HERE</p>
-            <input type="text" id="input" class="text-box">
+            <input type="text" id="input" class="text-box" required>
         </div>
 
         <div id="ingredients">
             <p id="text">LIST INGREDIENTS</p>
-            <input type="text" id="input">
+            <input type="text" id="input" required>
         </div>
 
         <div id="instructions">
             <p id="text">LIST INSTRUCTIONS</p>
-            <input type="text" id="input">
+            <input type="text" id="input" required>
         </div>
 
         <div id="image">
             <p id="text">ATTACH IMAGE URL</p>
-            <input type="url" id="imgInput">
+            <input type="url" class="img" id="imgInput" required>
         </div>
 
         <button type="button" class="button" id="btn">enter</button>
     </form>
 
-    <div class="display">
-    </div>
-
-    <button type="clear" class="clear" id="clear">clear</button>
-
+    <section class="display">
+    </section>
     <script src="index.js"></script> <!-- linking the javasript file -->
 </body>
 
