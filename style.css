@@ -3,6 +3,7 @@ html {
     font-size: 2vh;
     color: cornsilk;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .button,
@@ -35,27 +36,31 @@ html {
 .display {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
     width: 90vw;
     margin: 2rem auto;
+
 }
 
 .display-card {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-items: baseline;
+    display: inline-block;
     justify-content: space-around;
     width: 26%;
-    height: 50rem;
-    margin: 1rem auto;
+    height: 40rem;
+    margin: 2rem 5rem;
     background-color: #ffffff;
     color: black;
-    align-items: center;
 }
 
 .display-img {
-    width: 100%;
-    height: auto;
+    height: 10vw;
+    width: auto;
 }
 
 .display-name,

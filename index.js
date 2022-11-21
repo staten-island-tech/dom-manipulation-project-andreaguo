@@ -21,7 +21,7 @@ DOMSelectors.button.addEventListener("click", function () {
   })  
   
   DOMSelectors.display.insertAdjacentHTML(
-    "afterend",
+    "afterbegin",
     `<div class="display-card">
       <h1 class="display-name">${recipe.name}</h1>
       <h2 class="display-ingr">${recipe.ingredients}</h2>
