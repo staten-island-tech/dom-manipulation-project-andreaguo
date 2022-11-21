@@ -7,30 +7,69 @@ html {
 
 .button,
 .button:link,
-.button:visited,
-.clear,
-.clear:link,
-.clear:visited {
-    padding: 2px 8px;
+.button:visited {
+    padding: 6px 16px;
     display: inline-block;
     margin: 1rem;
-    font-size: 1.5vh;
+    font-size: 2vh;
     border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
     animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
-    border: white;
+    color: white;
+    border: 0px;
+    background-color: #7d3f19;
 }
 
-.button:hover,
-.clear:hover {
+.button:hover {
     transform: translateY(-0.1vh);
     box-shadow: 0 1vh 2vh rgb(127, 80, 46);
 }
 
-.button:active,
-.clear:active {
+.button:active {
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0.2);
+}
+
+.display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90vw;
+    margin: 2rem auto;
+}
+
+.display-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 26%;
+    height: 50rem;
+    margin: 1rem auto;
+    background-color: #ffffff;
+    color: black;
+    align-items: center;
+}
+
+.display-img {
+    width: 100%;
+    height: auto;
+}
+
+.display-name,
+.display-ingr,
+.display-instr {
+    font-size: var(--h3);
+}
+
+.clear {
+    padding: 6px 16px;
+    display: inline-block;
+    margin: 1rem;
+    font-size: 2vh;
+    border: none;
+    background-color: #7d3f19;
+    color: white;
 }

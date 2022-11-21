@@ -11,36 +11,49 @@
 
 <body>
     <header>
-        <h1 class="title">submit baking ideas here:</h1>
+        <h1 class="title">baking ideas:</h1>
     </header>
 
-    <form id="entries">
-        <div id="name">
-            <p id="text">NAME HERE</p>
-            <input type="text" id="input" class="text-box" required>
-        </div>
+    <section>
+        <form id="entries">
+            <div class="card">
+                <div id="name">
+                    <p id="text">NAME HERE</p>
+                    <input type="text" id="input" class="text-box" required>
+                </div>
 
-        <div id="ingredients">
-            <p id="text">LIST INGREDIENTS</p>
-            <input type="text" id="input" required>
-        </div>
+                <div id="ingredients">
+                    <p id="text">LIST INGREDIENTS</p>
+                    <input type="text" id="input" required>
+                </div>
 
-        <div id="instructions">
-            <p id="text">LIST INSTRUCTIONS</p>
-            <input type="text" id="input" required>
-        </div>
+                <div id="instructions">
+                    <p id="text">LIST INSTRUCTIONS</p>
+                    <input type="text" id="input" required>
+                </div>
 
-        <div id="image">
-            <p id="text">ATTACH IMAGE URL</p>
-            <input type="url" class="img" id="imgInput" required>
-        </div>
+                <div id="image">
+                    <p id="text">ATTACH IMAGE URL</p>
+                    <input type="url" class="img" id="imgInput" required>
+                </div>
+            </div>
 
-        <button type="button" class="button" id="btn">enter</button>
-    </form>
-
-    <section class="display">
+            <div class="hero-form-input">
+                <input type="submit" value="Submit" id="btn" class="button">
+            </div>
+        </form>
     </section>
-    <script src="index.js"></script> <!-- linking the javasript file -->
+
+    <section class="display">     
+        <!-- <div class="display-card">
+            <img class="display-img" src="https://www.gannett-cdn.com/presto/2019/08/08/USAT/dc1fe9c6-d585-42c4-9c69-e31cc46e4c94-ABBEY_ROAD.JPG?auto=webp&crop=1481,834,x0,y265&format=pjpg&width=1200"/>
+            <h2 class="display-artist">Beatles</h2>
+            <h3 class="display-album">Abbey Road</h3>
+             <button class="remove btn">Remove Album</button>
+        </div> -->
+    </section>
+    <script src="index.js">
+    </script> <!-- linking the javasript file -->
 </body>
 
 
