@@ -16,10 +16,12 @@ DOMSelectors.button.addEventListener("click", function () {
   recipe.instructions = DOMSelectors.inputs[2].value;
   recipe.url = DOMSelectors.imageURL.value;
   console.log(DOMSelectors.inputs)
-  DOMSelectors.inputs.forEach((el)=>{
-    el.value="";
-  })  
+  html(recipe);
+  clearButton();
+  clearInput();
+})  
   
+function html(recipe) { 
   DOMSelectors.display.insertAdjacentHTML(
     "afterbegin",
     `<div class="display-card">
@@ -29,15 +31,21 @@ DOMSelectors.button.addEventListener("click", function () {
       <img src="${recipe.url}" class="display-img" alt="inserted image">
       <button class="clear"> remove recipe </button>
   </div>`
-  );
-
-  DOMSelectors.imageURL.value = "";
+ );
+}
   
+function clearButton(){ 
   DOMSelectors.clear = document.querySelectorAll(".clear");
   DOMSelectors.clear.forEach((button) =>
-    button.addEventListener("click", function () {
-      this.parentElement.remove();
-    })
-  );
-  
-});
+  button.addEventListener("click", function () {
+    this.parentElement.remove();
+  })
+);
+}
+
+function clearInput(){  
+  DOMSelectors.inputs.forEach((el)=>{
+    el.value="";
+  })
+  DOMSelectors.imageURL.value = "";
+}
